@@ -1,0 +1,59 @@
+{
+    "name": "libref/uuid",
+    "description": "UUID types reference implementation",
+    "keywords": [
+        "LibRef",
+        "value objects",
+        "UUID"
+    ],
+    "authors": [
+        {
+            "name": "Bas Hamar de la Brethonière",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/libref/uuid/issues",
+        "source": "https://github.com/libref/uuid/tree/develop"
+    },
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "require-dev": {
+        "jakub-onderka/php-console-highlighter": "^0.3.2",
+        "jakub-onderka/php-parallel-lint": "^0.9.2",
+        "phpmd/phpmd": "^2.6",
+        "phpstan/phpstan": "^0.8.5",
+        "phpunit/phpunit": "^6.4",
+        "squizlabs/php_codesniffer": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LibRef\\Uuid\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {}
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": [
+            "@lint",
+            "@cs",
+            "@md",
+            "@stan",
+            "@unit"
+        ],
+        "fix": [
+            "@cbf",
+            "@cs"
+        ],
+        "cbf": "phpcbf --standard=PSR2 --colors ./src",
+        "cs": "phpcs --standard=PSR2 --colors ./src",
+        "lint": "parallel-lint ./src",
+        "md": "phpmd ./src text cleancode,codesize,controversial,design,naming,unusedcode",
+        "stan": "phpstan analyse -l 7 ./src",
+        "unit": "phpunit --colors=always"
+    }
+}
