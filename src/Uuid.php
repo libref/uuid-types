@@ -17,13 +17,15 @@ abstract class Uuid
         return preg_match(self::NIL, $uuid) === 1;
     }
 
-    protected function getVersion(Uuid $uuid) : int
+    protected function getVersion(Uuid $uuid): int
     {
         preg_match(self::PATTERN, $uuid, $matches);
         return (int)$matches[1];
     }
 
-    abstract public function __toString() : string;
+    abstract public function __toString(): string;
+
     abstract public function toString(): string;
-    abstract public function toCanonicalString() : string;
+
+    abstract public function toCanonicalString(): string;
 }
