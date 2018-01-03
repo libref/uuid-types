@@ -19,8 +19,8 @@ abstract class Uuid
 
     protected function getVersion(Uuid $uuid) : int
     {
-        $versionString = preg_match(self::PATTERN, $uuid, $matches);
-        var_dump($versionString, $matches);
+        preg_match(self::PATTERN, $uuid, $matches);
+        return (int)$matches[1];
     }
 
     abstract public function __toString() : string;
