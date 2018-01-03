@@ -1,5 +1,6 @@
 # LibRef Uuid
 [![Build Status](https://travis-ci.org/libref/uuid.svg?branch=develop)](https://travis-ci.org/libref/uuid)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/libref/uuid/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/libref/uuid/?branch=develop)
 
 ## What it is
 This package is a library reference implementation for the UUID contracts I am
