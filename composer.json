@@ -50,8 +50,8 @@
         "fix": [
             "@cbf"
         ],
-        "cbf": "phpcbf --standard=PSR2 --colors ./src",
-        "cs": "phpcs --standard=PSR2 --colors ./src",
+        "cbf": "phpcbf",
+        "cs": "phpcs",
         "lint": "parallel-lint ./src",
         "md": "phpmd ./src html ./phpmd.xml.dist --reportfile build/phpmd.html --strict",
         "stan": "phpstan analyse -l 7 ./src",
