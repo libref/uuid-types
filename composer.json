@@ -56,5 +56,8 @@
         "md": "phpmd ./src text cleancode,codesize,controversial,design,naming,unusedcode",
         "stan": "phpstan analyse -l 7 ./src",
         "unit": "phpunit --colors=always"
+    },
+    "config": {
+        "sort-packages": true
     }
 }
