@@ -54,7 +54,7 @@
         "cs": "phpcs",
         "lint": "parallel-lint ./src",
         "md": "phpmd ./src html ./phpmd.xml.dist --reportfile build/phpmd.html --strict",
-        "stan": "phpstan analyse -l 7 ./src",
+        "stan": "phpstan analyse -l 7 -c ./phpstan.neon ./src",
         "unit": "phpunit --colors=always"
     },
     "config": {
