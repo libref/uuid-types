@@ -6,8 +6,11 @@
 !.scrutinizer.yml
 !.travis.yml
 
-# Ignore Composer's lock file since this is a library.
-composer.lock
+# Blacklist files that are local user preferences.
+# - `composer.lock` because this is a library;
+# - `phpmd.xml` because it is a local copy of `phpmd.xml.dist`.
+/composer.lock
+/phpmd.xml
 
 # Ignore directories:
 # - `build` contains runtime (test) output;
