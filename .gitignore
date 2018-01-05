@@ -1,8 +1,16 @@
+# Ignore all dot files and dot directories.
 .*
+
+# Ignore Composer's lock file since this is a library.
 composer.lock
+
+# Ignore directories:
+# - `build` contains runtime (test) output;
+# - `vendor` contains external dependency files.
 /vendor/
 /build/
 
+# Whitelist some dot files that should be in the repository.
 !.gitignore
 !.scrutinizer.yml
 !.travis.yml
