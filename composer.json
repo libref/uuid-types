@@ -48,8 +48,7 @@
             "@unit"
         ],
         "fix": [
-            "@cbf",
-            "@cs"
+            "@cbf"
         ],
         "cbf": "phpcbf --standard=PSR2 --colors ./src",
         "cs": "phpcs --standard=PSR2 --colors ./src",
