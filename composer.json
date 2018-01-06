@@ -41,6 +41,7 @@
     "prefer-stable": true,
     "scripts": {
         "test": [
+            "@ensure_build_dir",
             "@lint",
             "@cs",
             "@md",
@@ -52,6 +53,7 @@
         ],
         "cbf": "phpcbf",
         "cs": "phpcs",
+        "ensure_build_dir": "@php -r \"if(!is_dir('build')){mkdir('build', 0777);}\"",
         "lint": "parallel-lint ./src",
         "md": "phpmd ./src html ./phpmd.xml.dist --reportfile build/phpmd.html --strict",
         "stan": "phpstan analyse -l 7 -c ./phpstan.neon ./src",
