@@ -2,7 +2,6 @@
 
 namespace LibRef\Uuid\Tests\ValueObjects;
 
-
 use LibRef\Uuid\Tests\TestCase;
 use LibRef\Uuid\Uuid;
 use LibRef\Uuid\Uuid4;

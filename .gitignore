@@ -1,5 +1,26 @@
+# Ignore all dot files and dot directories.
 .*
+
+# Whitelist some dot files that should be in the repository.
+!.editorconfig
 !.gitignore
-composer.lock
+!.scrutinizer.yml
+!.travis.yml
+
+# Blacklist files that are local user preferences.
+# - `composer.lock` because this is a library;
+# - `phpcs.xml` because it is a local copy of `phpcs.xml.dist`;
+# - `phpmd.xml` because it is a local copy of `phpmd.xml.dist`;
+# - `phpstan.neon` because it is a local copy of `phpstan.dist.neon`;
+# - `phpunit.xml` because it is a local copy of `phpunit.xml.dist`.
+/composer.lock
+/phpcs.xml
+/phpmd.xml
+/phpstan.neon
+/phpunit.xml
+
+# Ignore directories:
+# - `build` contains runtime (test) output;
+# - `vendor` contains external dependency files.
 /vendor/
 /build/
