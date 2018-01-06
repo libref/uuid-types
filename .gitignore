@@ -8,9 +8,15 @@
 
 # Blacklist files that are local user preferences.
 # - `composer.lock` because this is a library;
-# - `phpmd.xml` because it is a local copy of `phpmd.xml.dist`.
+# - `phpcs.xml` because it is a local copy of `phpcs.xml.dist`;
+# - `phpmd.xml` because it is a local copy of `phpmd.xml.dist`;
+# - `phpstan.neon` because it is a local copy of `phpstan.dist.neon`;
+# - `phpunit.xml` because it is a local copy of `phpunit.xml.dist`.
 /composer.lock
+/phpcs.xml
 /phpmd.xml
+/phpstan.neon
+/phpunit.xml
 
 # Ignore directories:
 # - `build` contains runtime (test) output;
