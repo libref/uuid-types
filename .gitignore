@@ -2,6 +2,7 @@
 .*
 
 # Whitelist some dot files that should be in the repository.
+!.editorconfig
 !.gitignore
 !.scrutinizer.yml
 !.travis.yml
