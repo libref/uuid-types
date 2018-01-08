@@ -1,5 +1,5 @@
 {
-    "name": "libref/uuid",
+    "name": "libref/uuid-types",
     "description": "UUID types reference implementation",
     "keywords": [
         "LibRef",
@@ -13,8 +13,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/libref/uuid/issues",
-        "source": "https://github.com/libref/uuid/tree/develop"
+        "issues": "https://github.com/libref/uuid-types/issues",
+        "source": "https://github.com/libref/uuid-types/tree/develop"
     },
     "require": {
         "php": ">=7.1.0"
