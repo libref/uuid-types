@@ -6,14 +6,22 @@ php:
   - nightly
   - hhvm
 
+# Execute all of the commands which need to be executed before installing
+# dependencies.
 before_install:
   # Force HHVM PHP 7 mode
   - if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then echo hhvm.php7.all=1 >> /etc/hhvm/php.ini; fi
 
+# Install all of the dependencies.
+install:
+
+# Execute all of the commands which need to be executed before running actual
+# tests.
 before_script:
   - composer self-update
   - composer install
 
+# Execute all of the commands which should make the builds pass or fail.
 script:
   - composer test
 
