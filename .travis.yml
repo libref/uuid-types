@@ -14,12 +14,12 @@ before_install:
 
 # Install all of the dependencies.
 install:
+  - composer self-update
+  - composer install
 
 # Execute all of the commands which need to be executed before running actual
 # tests.
 before_script:
-  - composer self-update
-  - composer install
 
 # Execute all of the commands which should make the builds pass or fail.
 script:
