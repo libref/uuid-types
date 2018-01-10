@@ -1,14 +1,14 @@
 # LibRef Uuid
-[![Build Status](https://travis-ci.org/libref/uuid.svg?branch=develop)](https://travis-ci.org/libref/uuid)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/libref/uuid/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/libref/uuid/?branch=develop)
+[![Build Status](https://travis-ci.org/libref/uuid-types.svg?branch=develop)](https://travis-ci.org/libref/uuid-types)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/libref/uuid-types/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/libref/uuid-types/?branch=develop)
 
 ## What it is
 This package is a library reference implementation for the UUID contracts I am
 working on.
 
-## What it is not
+## What it is *not*
 A package for generating UUIDs. You are probably looking for something like the 
-excellent package [ramsey/uuid](https://github.com/ramsey/uuid). 
+excellent [ramsey/uuid](https://github.com/ramsey/uuid) package. 
 
 ## Status and roadmap
 This package is considered pre-alpha. The main goal is to make several value 
