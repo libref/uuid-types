@@ -4,6 +4,11 @@ php:
   - '7.1'
   - '7.2'
   - nightly
+  - hhvm
+
+before_install:
+  # Force HHVM PHP 7 mode
+  - if [[ $TRAVIS_PHP_VERSION = hhv* ]]; then echo hhvm.php7.all=1 >> /etc/hhvm/php.ini; fi
 
 before_script:
   - composer self-update
@@ -15,6 +20,7 @@ script:
 matrix:
   allow_failures:
     - php: nightly
+    - php: hhvm
 
 notifications:
   on_success: never
