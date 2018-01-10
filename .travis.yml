@@ -14,8 +14,8 @@ before_install:
 
 # Install all of the dependencies.
 install:
-  - composer self-update
-  - composer install
+  - travis_retry composer self-update
+  - travis_retry composer install
 
 # Execute all of the commands which need to be executed before running actual
 # tests.
