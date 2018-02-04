@@ -1,5 +1,5 @@
 <?php
-namespace LibRef\Uuid\Tests;
+namespace LibRef\Types\Uuid\Tests;
 
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 

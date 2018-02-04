@@ -35,7 +35,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "LibRef\\Uuid\\Tests\\": "tests/unit/"
+            "LibRef\\Types\\Uuid\\Tests\\": "tests/unit/"
         }
     },
     "minimum-stability": "dev",

@@ -1,10 +1,10 @@
 <?php
 
-namespace LibRef\Uuid\Tests\ValueObjects;
+namespace LibRef\Types\Uuid\Tests\ValueObjects;
 
-use LibRef\Uuid\Tests\TestCase;
-use LibRef\Uuid\Uuid;
-use LibRef\Uuid\Uuid4;
+use LibRef\Types\Uuid\Tests\TestCase;
+use LibRef\Types\Uuid\Uuid;
+use LibRef\Types\Uuid\Uuid4;
 
 class Uuid4Test extends TestCase
 {
