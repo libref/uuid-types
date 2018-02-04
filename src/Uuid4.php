@@ -1,6 +1,6 @@
 <?php
 
-namespace LibRef\Uuid;
+namespace LibRef\Types\Uuid;
 
 class Uuid4 extends Uuid
 {
