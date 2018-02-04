@@ -10,7 +10,7 @@ class Uuid4Test extends TestCase
 {
     public function testExistence()
     {
-        $this->assertTrue(class_exists(Uuid::class));
+        $this->assertTrue(interface_exists(Uuid::class));
         $this->assertTrue(class_exists(Uuid4::class));
     }
 }
