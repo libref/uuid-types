@@ -25,6 +25,10 @@ before_script:
 script:
   - composer test
 
+after_sctipt:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover build/coverage.xml
+
 matrix:
   allow_failures:
     - php: nightly
