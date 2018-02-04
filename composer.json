@@ -23,6 +23,7 @@
         "jakub-onderka/php-console-highlighter": "^0.3.2",
         "jakub-onderka/php-parallel-lint": "^0.9.2",
         "phpmd/phpmd": "^2.6",
+        "phpmetrics/phpmetrics": "^2.3",
         "phpstan/phpstan": "^0.8.5",
         "phpunit/phpunit": "^6.4",
         "squizlabs/php_codesniffer": "^3.1"
@@ -56,6 +57,7 @@
         "ensure_build_dir": "@php -r \"if(!is_dir('build')){mkdir('build', 0777);}\"",
         "lint": "parallel-lint ./src",
         "md": "phpmd ./src html ./phpmd.xml.dist --reportfile build/phpmd.html --strict",
+        "metrics": "phpmetrics --report-html=build/phpmetrics --report-xml=build/phpmetrics.xml --violations-xml=build/violations.xml ./",
         "stan": "phpstan analyse -l 7 -c ./phpstan.dist.neon ./src",
         "unit": "phpunit --colors=always"
     },
