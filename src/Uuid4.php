@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LibRef\Types\Uuid;
 
 class Uuid4 implements Uuid
