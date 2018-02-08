@@ -1,31 +1,12 @@
 <?php
 
-namespace LibRef\Uuid;
+namespace LibRef\Types\Uuid;
 
-abstract class Uuid
+interface Uuid
 {
-    private const PATTERN = '/[a-f0-9]{8}-[a-f0-9]{4}-([1-4])[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}/i';
-    private const NIL = '/0{8}-(0{4}-){3}0{8}/';
+    public function __toString(): string;
 
-    protected function matchesUuidPattern(Uuid $uuid): bool
-    {
-        return preg_match(self::PATTERN, $uuid) === 1;
-    }
+    public function toString(): string;
 
-    protected function matchesNilPattern(Uuid $uuid): bool
-    {
-        return preg_match(self::NIL, $uuid) === 1;
-    }
-
-    protected function getVersion(Uuid $uuid): int
-    {
-        preg_match(self::PATTERN, $uuid, $matches);
-        return (int)$matches[1];
-    }
-
-    abstract public function __toString(): string;
-
-    abstract public function toString(): string;
-
-    abstract public function toCanonicalString(): string;
+    public function toCanonicalString(): string;
 }

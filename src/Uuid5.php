@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace LibRef\Types\Uuid;
 
-class Uuid4 implements Uuid
+class Uuid5 implements Uuid
 {
     private const PATTERN = '/[a-f0-9]{8}-[a-f0-9]{4}-([1-5])[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}/i';
 
-    private const VERSION = 4;
+    private const VERSION = 5;
 
     private $value;
 
