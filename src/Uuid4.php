@@ -6,44 +6,41 @@ namespace LibRef\Types\Uuid;
 
 class Uuid4 implements Uuid
 {
-    private const PATTERN = '/[a-f0-9]{8}-[a-f0-9]{4}-([1-4])[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}/i';
+    private const PATTERN = '/[a-f0-9]{8}-[a-f0-9]{4}-([1-5])[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}/i';
+
+    private const VERSION = 4;
 
     private $value;
 
     public function __construct(string $uuid)
     {
         $this->value = $uuid;
-        if (!$this->matchesUuidPattern($this)) {
-            throw new \Exception('Not a valid UUID');
-        }
-        if ($this->getVersion($this) !== 4) {
-            throw new \Exception('Not a valid UUID version 4');
-        }
+        $this->validate($uuid);
     }
 
-    public function __toString(): string
+    final public function __toString(): string
     {
         return $this->toString();
     }
 
-    public function toString(): string
+    final public function toString(): string
     {
         return $this->value;
     }
 
-    public function toCanonicalString(): string
+    final public function toCanonicalString(): string
     {
         return strtolower($this->toString());
     }
 
-    protected function matchesUuidPattern(Uuid $uuid): bool
+    private function validate(string $uuid): void
     {
-        return preg_match(self::PATTERN, $uuid) === 1;
-    }
-
-    protected function getVersion(Uuid $uuid): int
-    {
-        preg_match(self::PATTERN, $uuid, $matches);
-        return (int)$matches[1];
+        if (preg_match(self::PATTERN, $uuid, $matches) !== 1) {
+            throw Exception::invalidPattern($uuid);
+        }
+        $version = (int)$matches[1];
+        if ($version !== self::VERSION) {
+            throw Exception::wrongVersion($uuid, self::VERSION);
+        }
     }
 }
