@@ -10,6 +10,9 @@ class Uuid1 implements Uuid
 
     private const VERSION = 1;
 
+    /**
+     * @var string
+     */
     private $value;
 
     public function __construct(string $uuid)

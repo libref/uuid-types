@@ -1,6 +1,7 @@
 <?php
 namespace LibRef\Types\Uuid\Tests;
 
+use Exception;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
 abstract class TestCase extends PHPUnitTestCase
